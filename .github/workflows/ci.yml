@@ -7,21 +7,21 @@ on:
 
 jobs:
   testes-unitarios:
-   runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
-      -name: Checkout de codigo
-       uses: actions/checkout@v4
+      - name: Checkout de codigo
+        uses: actions/checkout@v4
       
-      -name: Configurar o ambiente virtual
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.11'
+      - name: Configurar o ambiente virtual
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
 
-      -name: Instalar dependencias
-      run: |
-        pip install -r requirements.txt
+      - name: Instalar dependencias
+        run: |
+          pip install -r requirements.txt
 
-      -name: Executar testes 
-      run: |
-        pytest tests/unit
-        
+      - name: Executar testes 
+        run: |
+          pytest tests/unit
+          
